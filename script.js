@@ -19,16 +19,20 @@
 
   // Hamburger mobile
   var burger = $("#hamburger"), links = $("#navLinks");
-  burger.addEventListener("click", function () {
-    var open = links.classList.toggle("open");
+  function setMenu(open) {
+    links.classList.toggle("open", open);
     burger.classList.toggle("open", open);
     burger.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.style.overflow = open ? "hidden" : "";
+  }
+  burger.addEventListener("click", function () {
+    setMenu(!links.classList.contains("open"));
   });
   $$(".nav-link, .nav-cta", links).forEach(function (a) {
-    a.addEventListener("click", function () {
-      links.classList.remove("open"); burger.classList.remove("open");
-    });
+    a.addEventListener("click", function () { setMenu(false); });
   });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
+  window.addEventListener("resize", function () { if (window.innerWidth > 900) setMenu(false); });
 
   // Scroll-spy: tandai link aktif
   var sections = ["beranda", "layanan", "harga", "galeri", "cara", "pesan", "tentang", "kontak"]
