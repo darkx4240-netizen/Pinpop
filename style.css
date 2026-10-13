@@ -101,8 +101,17 @@ h2{font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:-.01em;margin-bottom:6px}
 .amount{font-size:2rem;font-weight:800;color:var(--primary);margin:10px 0 4px}
 .amount span{font-size:1rem;color:var(--muted)}
 .price .check{text-align:left}
-.price.popular{background:linear-gradient(180deg,#EEF2FF,#fff)}
+.plist{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:18px}
+.plist h3{font-size:.95rem}
+.tiers{list-style:none;margin:12px 0 16px;display:grid;gap:6px;font-size:.82rem;color:#334155;text-align:left}
+.tiers li{display:flex;justify-content:space-between;gap:8px;border-bottom:1px dashed var(--line);padding-bottom:5px}
+.tiers li:last-child{border-bottom:0}
+.tiers b{color:var(--ink);white-space:nowrap}
+.tiers span{color:var(--muted)}
+.cat-title{margin:26px 0 0;font-size:1.05rem}
 .note{text-align:center;color:var(--muted);margin-top:18px;font-size:.9rem}
+.notes-card{text-align:left}
+.notes-card ul{margin:0;padding-left:18px;display:grid;gap:6px;color:#334155;font-size:.88rem}
 
 /* Gallery */
 .filters{display:flex;gap:10px;margin-bottom:20px}
@@ -110,7 +119,7 @@ h2{font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:-.01em;margin-bottom:6px}
 .chip:hover{border-color:var(--primary);color:var(--primary)}
 .chip.active{background:var(--ink);color:#fff;border-color:var(--ink)}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.g-item{margin:0;cursor:pointer;border-radius:var(--radius);overflow:hidden;background:#fff;border:1px solid var(--line);transition:transform .2s}
+.gallery-4{grid-template-columns:repeat(4,1fr)}
 .g-item:hover{transform:translateY(-4px) scale(1.01)}
 .g-item figcaption{padding:10px 14px;font-size:.85rem;font-weight:600;color:#334155}
 .g-item.rec{cursor:default;padding:22px 18px;text-align:center;display:grid;gap:10px;justify-items:center}
@@ -188,6 +197,7 @@ body{overflow-x:clip}
   .hero-grid,.form-grid{grid-template-columns:1fr}
   .grid-4{grid-template-columns:repeat(2,1fr)}
   .grid-3{grid-template-columns:repeat(2,1fr)}
+  .plist{grid-template-columns:repeat(2,1fr)}
   .gallery{grid-template-columns:repeat(2,1fr)}
   .steps{grid-template-columns:1fr 1fr}
   .hero{padding:40px 0 48px}
@@ -212,7 +222,7 @@ body{overflow-x:clip}
   .hero-meta{gap:14px;flex-wrap:wrap}
   .hero-meta div{min-width:30%}
   .badge{font-size:.75rem;max-width:100%;white-space:normal}
-  .grid-4,.grid-3,.gallery{grid-template-columns:1fr}
+  .grid-4,.grid-3,.gallery,.plist{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
   .row2{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr;text-align:center;justify-items:center}

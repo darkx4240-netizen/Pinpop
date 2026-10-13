@@ -56,7 +56,7 @@
 
   // Tombol paket -> preselect form + scroll
   var paketSelect = $("#paket"), jumlahInput = $("#jumlah");
-  var jumlahMap = { "Paket Digital": 0, "Digital + Cetak": 25, "Revisi Tambahan": 0, "Custom": 0 };
+  var jumlahMap = { "Pin Peniti 32mm": 20, "Pin Peniti 44mm": 15, "Pin Peniti 58mm": 10, "Pin Peniti 75mm": 10, "Tempelan Kulkas 44mm": 15, "Tempelan Kulkas 58mm": 10, "Gantungan Kunci 44mm": 15, "Gantungan Kunci 58mm": 10, "Gantungan Kunci 2 sisi 45mm": 15, "Gantungan Kunci Akrilik 5cm": 10, "Jasa Desain": 1, "Custom": 20 };
   $$("[data-paket]").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var val = btn.dataset.paket;
@@ -119,7 +119,7 @@
     if (input) input.classList.toggle("invalid", !!msg);
     return !msg;
   }
-  var WA_ADMIN = "6285387881619";
+  var WA_ADMIN = "6282256711133";
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var nama = $("#nama").value.trim();
@@ -141,12 +141,12 @@
     var fileInput = $("#referensi");
     var fileName = (fileInput && fileInput.files[0]) ? fileInput.files[0].name : "-";
     var lines = [
-      "Halo Pin Pop! Saya mau pesan:",
+      "Halo Papapin! Saya mau pesan:",
       "- Nama: " + nama,
       "- WA: " + wa,
-      "- Paket: " + paket,
-      "- Jumlah pin: " + (jumlah === "" ? "-" : jumlah),
-      "- Konsep: " + desk,
+      "- Produk: " + paket,
+      "- Jumlah: " + (jumlah === "" ? "-" : jumlah),
+      "- Desain/konsep: " + desk,
       "- Referensi: " + fileName
     ];
     var url = "https://wa.me/" + WA_ADMIN + "?text=" + encodeURIComponent(lines.join("\n"));
@@ -155,7 +155,7 @@
     setTimeout(function () {
       btn.disabled = false; btn.textContent = "Kirim Pesanan 🚀";
       toast("✅ Pesanan diteruskan ke WhatsApp — tinggal tekan kirim di chat yang terbuka 🙏", true);
-      form.reset(); paketSelect.value = "Paket Digital"; jumlahInput.value = 0;
+      form.reset(); paketSelect.value = "Pin Peniti 32mm"; jumlahInput.value = 20;
       $("#fileName").textContent = "Belum ada file dipilih";
     }, 600);
   });
