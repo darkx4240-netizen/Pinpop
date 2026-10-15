@@ -141,13 +141,17 @@
     var fileInput = $("#referensi");
     var fileName = (fileInput && fileInput.files[0]) ? fileInput.files[0].name : "-";
     var lines = [
-      "Halo Pin Pop! Saya mau pesan:",
-      "- Nama: " + nama,
-      "- WA: " + wa,
-      "- Produk: " + paket,
-      "- Jumlah: " + (jumlah === "" ? "-" : jumlah),
-      "- Desain/konsep: " + desk,
-      "- Referensi: " + fileName
+      "👋 Halo Pin Pop! 🎨",
+      "Saya mau pesan pin ya:",
+      "",
+      "📌 Nama: " + nama,
+      "📱 WA: " + wa,
+      "📦 Produk: " + paket,
+      "🔢 Jumlah: " + (jumlah === "" ? "-" : jumlah),
+      "🎨 Desain/konsep: " + desk,
+      "🖼️ Referensi: " + fileName,
+      "",
+      "Terima kasih 🙏 ditunggu info selanjutnya ya!"
     ];
     var url = "https://wa.me/" + WA_ADMIN + "?text=" + encodeURIComponent(lines.join("\n"));
     window.open(url, "_blank", "noopener"); // sync: di dalam user gesture agar tidak diblokir popup-blocker
