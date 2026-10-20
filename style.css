@@ -218,4 +218,8 @@ body{overflow-x:clip}
   .o2{width:80px;height:80px}.o3{width:90px;height:90px}.o5{width:76px;height:76px}
   .pin-real{width:96px;height:96px}
   .pr1{width:104px;height:104px}
+  .hero-visual{margin-top:52px}
+  .float-tag{z-index:4;font-size:.68rem;padding:6px 10px;white-space:nowrap}
+  .f1{left:0;top:-40px}
+  .f2{right:0;top:-40px;animation:none}
 }
