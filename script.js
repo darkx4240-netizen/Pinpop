@@ -56,7 +56,7 @@
 
   // Tombol paket -> preselect form + scroll
   var paketSelect = $("#paket"), jumlahInput = $("#jumlah");
-  var jumlahMap = { "Pin Peniti 32mm": 20, "Pin Peniti 44mm": 15, "Pin Peniti 58mm": 10, "Pin Peniti 75mm": 10, "Jasa Desain": 1, "Custom": 20 };
+  var jumlahMap = { "Pin Peniti 32mm": 20, "Pin Peniti 44mm": 15, "Pin Peniti 58mm": 10, "Jasa Desain": 1, "Custom": 20 };
   $$("[data-paket]").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var val = btn.dataset.paket;
