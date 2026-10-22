@@ -187,6 +187,10 @@ input.invalid,textarea.invalid{border-color:#DC2626}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .5s,transform .5s}
 .reveal.visible{opacity:1;transform:none}
 body{overflow-x:clip}
+/* Native banner Adsterra */
+.ad-native-wrap{max-width:1120px;margin:28px auto 0;padding:0 24px;text-align:center;min-height:120px}
+.ad-native-wrap .ad-label{display:block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.ad-native-wrap iframe{max-width:100%}
 
 @media(max-width:900px){
   .hero-grid,.form-grid{grid-template-columns:1fr}
